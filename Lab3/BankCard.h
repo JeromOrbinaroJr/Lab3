@@ -2,6 +2,7 @@
 #include <string>
 #include <cinttypes>
 #include <iostream>
+#include <vector>
 
 class BankCard {
 public:
@@ -37,7 +38,6 @@ public:
     friend std::ostream& operator<<(std::ostream& os, const BankCard& card);
 
     //Methods
-    std::string receiveValidityPeriod(int64_t& numberOwner);
 
 private:
     std::string m_nameCard;

@@ -128,11 +128,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BankCard.cpp" />
+    <ClCompile Include="CardStructure.cpp" />
     <ClCompile Include="DataLoader.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BankCard.h" />
+    <ClInclude Include="CardStructure.h" />
     <ClInclude Include="DataLoader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
