@@ -130,12 +130,14 @@
     <ClCompile Include="BankCard.cpp" />
     <ClCompile Include="CardStructure.cpp" />
     <ClCompile Include="DataLoader.cpp" />
+    <ClCompile Include="DebitCard.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BankCard.h" />
     <ClInclude Include="CardStructure.h" />
     <ClInclude Include="DataLoader.h" />
+    <ClInclude Include="DebitCard.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

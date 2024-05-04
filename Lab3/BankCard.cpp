@@ -5,7 +5,7 @@
 #include <vector>
 
 //Constructor
-BankCard::BankCard() {};
+BankCard::BankCard() {}
 
 BankCard::BankCard(const std::string& nameCard, const int64_t& numberCard, const std::string& validityPeriod, const std::string& surnameOwner, const std::string& nameOwner, const std::string& patronymicOwner, const int64_t& numberOwner, const int64_t& scoreCard) :
 	m_nameCard(nameCard), m_numberCard(numberCard), m_validityPeriodCard(validityPeriod), m_surnameOwner(surnameOwner), m_nameOwner(nameOwner), m_patronymicOwner(patronymicOwner), m_numberOwner(numberOwner), m_scoreCard(scoreCard) {}
@@ -45,5 +45,3 @@ std::ostream& operator<<(std::ostream& os, const BankCard& card) {
 	os << "Score of card: " << card.getScoreCard() << '\n';
 	return os;
 }
-
-//Methods
