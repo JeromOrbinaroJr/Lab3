@@ -1,14 +1,14 @@
-#include "CardStructure.h"
+#include "BankCardStructure.h"
 
-void CardStructure::addCard(const BankCard& card) {
+void BankCardStructure::addCard(const BankCard& card) {
 	cards.push_back(card);
 }
 
-const std::vector<BankCard>& CardStructure::getAllCards() const {
+const std::vector<BankCard>& BankCardStructure::getAllCards() const {
 	return cards;
 }
 
-std::string CardStructure::getValidityPeriodByOwnerNumber(int64_t ownerNumber) const {
+std::string BankCardStructure::getValidityPeriodByOwnerNumber(int64_t ownerNumber) const {
     for (const auto& card : cards) {
         if (card.getNumberOwner() == ownerNumber) {
             return card.getValidityPeriod();
@@ -17,7 +17,7 @@ std::string CardStructure::getValidityPeriodByOwnerNumber(int64_t ownerNumber) c
     return "There is no such client.";
 }
 
-void CardStructure::sameNames(const BankCard& firstCard, const BankCard& secondCard) {
+void BankCardStructure::sameNames(const BankCard& firstCard, const BankCard& secondCard) {
     std::string nameFirstCard = firstCard.getNameCard();
     std::string nameSecondCard = secondCard.getNameCard();
     if (nameFirstCard == nameSecondCard) {

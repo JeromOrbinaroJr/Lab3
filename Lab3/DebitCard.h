@@ -1,7 +1,6 @@
 #pragma once
 #include <string>
 #include "BankCard.h"
-#include "CardStructure.h"
 
 class DebitCard : public BankCard {
 public:
@@ -14,15 +13,16 @@ public:
 
 	//Getters
 	std::string getNamePaymentSys() const;
+	int64_t getWithdrawalOwnerNumber() const;
 
 	//Setters
 	void setNamePaymentSys(const std::string& namePaymentSys);
 
 	//Methods
 	void createDebitCard(BankCard& bankCard);
-	void withdrawMoney(std::vector<BankCard>& cards, int64_t numberOwner, int64_t amount);
-	void depositMoney(int64_t numberOwner, int64_t amount);
-
+	void depositMoney(int64_t numberOwner, int64_t amount); // функция: положить деньги
+	void withdrawMoney(	int64_t numberOwner, int64_t amount); // функция: снять деньги
 private:
 	std::string m_namePaymentSys;
+	int64_t m_withdrawalOwnerNumber;
 };

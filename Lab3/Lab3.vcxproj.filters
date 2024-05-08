@@ -24,10 +24,13 @@
     <ClCompile Include="DataLoader.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CardStructure.cpp">
+    <ClCompile Include="BankCardStructure.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="DebitCard.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="DebitCardStructure.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,10 +41,13 @@
     <ClInclude Include="DataLoader.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="CardStructure.h">
+    <ClInclude Include="BankCardStructure.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="DebitCard.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="DebitCardStructure.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

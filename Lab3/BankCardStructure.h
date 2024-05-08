@@ -1,7 +1,7 @@
 #pragma once
 #include "BankCard.h"
 
-struct CardStructure {
+struct BankCardStructure {
     std::vector<BankCard> cards;
 
     void addCard(const BankCard& card);
