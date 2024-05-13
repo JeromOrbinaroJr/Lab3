@@ -8,7 +8,7 @@ const std::vector<BankCard>& BankCardStructure::getAllCards() const {
 	return cards;
 }
 
-std::string BankCardStructure::getValidityPeriodByOwnerNumber(int64_t ownerNumber) const {
+std::string BankCardStructure::getValidityPeriodByOwnerNumber(std::string ownerNumber) const {
     for (const auto& card : cards) {
         if (card.getNumberOwner() == ownerNumber) {
             return card.getValidityPeriod();

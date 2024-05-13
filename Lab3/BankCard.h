@@ -8,31 +8,30 @@ class BankCard {
 public:
     //Constructor
     BankCard();
-
-    BankCard(const std::string& nameCard, const int64_t& numberCard, const std::string& validityPeriod, const std::string& surnameOwner, const std::string& nameOwner, const std::string& patronymicOwner, const int64_t& numberOwner, const int64_t& scoreCard);
+    BankCard(const std::string& nameCard, const std::string& numberCard, const std::string& validityPeriod, const std::string& surnameOwner, const std::string& nameOwner, const std::string& patronymicOwner, const std::string& numberOwner, const int& scoreCard);
 
     //Destructor
     ~BankCard();
 
     //Getters
     std::string getNameCard() const;
-    int64_t getNumberCard() const;
+    std::string getNumberCard() const;
     std::string getValidityPeriod() const;
     std::string getSurnameOwner() const;
     std::string getNameOwner() const;
     std::string getPatronomycOwner() const;
-    int64_t getNumberOwner() const;
-    int64_t getScoreCard() const;
+    std::string getNumberOwner() const;
+    int getScoreCard() const;
 
     //Setters
     void setNameCard(const std::string& nameCard);
-    void setNumberCard(const int64_t& numberCard);
+    void setNumberCard(const std::string& numberCard);
     void setValidityPeriod(const std::string& validityPeriod);
     void setSurnameOwner(const std::string& surnameOwner);
     void setNameOwner(const std::string& nameOwner);
     void setPatronymicOwner(const std::string& patronymicOwner);
-    void setNumberOwner(const int64_t& numberOwner);
-    void setScoreCard(const int64_t& scoreCard);
+    void setNumberOwner(const std::string& numberOwner);
+    void setScoreCard(const int& scoreCard);
 
     //Operator Overloading
     friend std::ostream& operator<<(std::ostream& os, const BankCard& card);
@@ -41,11 +40,11 @@ public:
 
 private:
     std::string m_nameCard;
-    int64_t m_numberCard;
+    std::string m_numberCard;
     std::string m_validityPeriodCard;
     std::string m_surnameOwner;
     std::string m_nameOwner;
     std::string m_patronymicOwner;
-    int64_t m_numberOwner;
-    int64_t m_scoreCard;
+    std::string m_numberOwner;
+    int m_scoreCard;
 };

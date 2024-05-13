@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <iostream>
 #include "BankCard.h"
 
 class DebitCard : public BankCard {
@@ -13,16 +14,19 @@ public:
 
 	//Getters
 	std::string getNamePaymentSys() const;
-	int64_t getWithdrawalOwnerNumber() const;
+	std::string getWithdrawalOwnerNumber() const;
 
 	//Setters
 	void setNamePaymentSys(const std::string& namePaymentSys);
 
+	//Operator Overloading
+	friend std::ostream& operator<<(std::ostream& os, const DebitCard& card);
+
 	//Methods
 	void createDebitCard(BankCard& bankCard);
-	void depositMoney(int64_t numberOwner, int64_t amount); // функция: положить деньги
-	void withdrawMoney(	int64_t numberOwner, int64_t amount); // функция: снять деньги
+	void depositMoney(int amount); // функция: положить деньги
+	void withdrawMoney(int amount); // функция: снять деньги
 private:
 	std::string m_namePaymentSys;
-	int64_t m_withdrawalOwnerNumber;
+	std::string m_withdrawalOwnerNumber;
 };

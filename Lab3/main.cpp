@@ -6,7 +6,6 @@
 int main() {
     BankCardStructure bankCardStructure;
     DebitCardStructure debitCardStructure;
-    int64_t codeOwner;
 
     std::cout << firstCard << std::endl;
     bankCardStructure.addCard(firstCard);
@@ -18,13 +17,24 @@ int main() {
     secondDebitCard.createDebitCard(secondCard);
     debitCardStructure.addDebitCard(secondDebitCard);
 
-    secondDebitCard.withdrawMoney(1111111, 500);
-    debitCardStructure.printWithdrawalOwnerNumber(firstDebitCard, secondDebitCard);
+    std::cout << firstDebitCard << std::endl;
+    std::cout << secondDebitCard << std::endl;
 
-   /* cardStructure.sameNames(firstCard, secondCard);
+    //Вывода срока действия карты по коду владельца
+    std::string codeOwner;
     std::cout << "Enter owner code: ";
     std::cin >> codeOwner;
-    std::cout << "Validity period of card with this code owner: " << cardStructure.getValidityPeriodByOwnerNumber(codeOwner) << std::endl;*/
+    std::cout << "Validity period of card with this code owner: " << bankCardStructure.getValidityPeriodByOwnerNumber(codeOwner) << std::endl;
+
+    //Имеют ли две карты одинаковые имена
+    bankCardStructure.sameNames(firstCard, secondCard);
+
+    //Операции положить и снять деньги на счёте дебетовой карты 
+    firstDebitCard.depositMoney(1000);
+    secondDebitCard.withdrawMoney(500);
+
+    //Какая из двух карт провела операцию снятия денег 
+    debitCardStructure.printWithdrawalOwnerNumber(firstDebitCard, secondDebitCard);
 
     return 0;
 }
