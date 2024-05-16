@@ -36,8 +36,6 @@ public:
     //Operator Overloading
     friend std::ostream& operator<<(std::ostream& os, const BankCard& card);
 
-    //Methods
-
 private:
     std::string m_nameCard;
     std::string m_numberCard;

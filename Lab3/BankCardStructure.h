@@ -9,3 +9,4 @@ struct BankCardStructure {
     std::string getValidityPeriodByOwnerNumber(std::string ownerNumber) const;
     void sameNames(const BankCard& firstCard, const BankCard& secondCard);
 };
+    
