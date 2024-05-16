@@ -44,7 +44,7 @@ void DebitCard::createDebitCard(BankCard& bankCard) {
 
 void DebitCard::depositMoney(int amount) {
     setScoreCard(getScoreCard() + amount);
-    std::cout << "Deposit successful. New balance: " << getScoreCard() << std::endl;
+    std::cout << "Deposit successful by number: " << getNumberOwner() << ". New balance: " << getScoreCard() << std::endl;
 }
 
 void DebitCard::withdrawMoney(int amount) {
@@ -52,7 +52,7 @@ void DebitCard::withdrawMoney(int amount) {
         if (amount > getScoreCard()) { throw amount; }
         m_withdrawalOwnerNumber = getNumberOwner();
         setScoreCard(getScoreCard() - amount);
-        std::cout << "Withdrawal successful. New balance: " << getScoreCard() << std::endl;
+        std::cout << "The withdrawal was successful by number: "<< getNumberOwner() << ". New balance: " << getScoreCard() << std::endl;
     }
     catch (int amount) {
         std::cout << "Insufficient funds. Withdrawal failed." << std::endl;
