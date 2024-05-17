@@ -31,7 +31,7 @@ std::ostream& operator<<(std::ostream& os, const DebitCard& card) {
 }
 
 //Methods
-void DebitCard::createDebitCard(BankCard& bankCard) {
+void DebitCard::createDebitCard(const BankCard& bankCard) {
     setNameCard(bankCard.getNameCard());
     setNumberCard(bankCard.getNumberCard());
     setValidityPeriod(bankCard.getValidityPeriod());
@@ -58,4 +58,3 @@ void DebitCard::withdrawMoney(int amount) {
         std::cout << "Insufficient funds. Withdrawal failed." << std::endl;
     }
 }
-

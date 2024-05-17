@@ -23,7 +23,7 @@ public:
 	friend std::ostream& operator<<(std::ostream& os, const DebitCard& card);
 
 	//Methods
-	void createDebitCard(BankCard& bankCard);
+	void createDebitCard(const BankCard& bankCard);
 	void depositMoney(int amount); // функция: положить деньги
 	void withdrawMoney(int amount); // функция: снять деньги
 private:

@@ -7,19 +7,7 @@ int main() {
     BankCardStructure bankCardStructure;
     DebitCardStructure debitCardStructure;
 
-    std::cout << firstCard << std::endl;
-    bankCardStructure.addCard(firstCard);
-    firstDebitCard.createDebitCard(firstCard);
-    debitCardStructure.addDebitCard(firstDebitCard);
-
-    std::cout << secondCard << std::endl;
-    bankCardStructure.addCard(secondCard);
-    secondDebitCard.createDebitCard(secondCard);
-    debitCardStructure.addDebitCard(secondDebitCard);
-
-    std::cout << firstDebitCard << std::endl;
-    std::cout << secondDebitCard << std::endl;
-
+    initData(bankCardStructure, debitCardStructure);
     //Вывода срока действия карты по коду владельца
     std::string codeOwner;
     std::cout << "Enter owner code: ";
