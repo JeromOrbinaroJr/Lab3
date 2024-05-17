@@ -8,6 +8,7 @@ int main() {
     DebitCardStructure debitCardStructure;
 
     initData(bankCardStructure, debitCardStructure);
+
     //Вывода срока действия карты по коду владельца
     std::string codeOwner;
     std::cout << "Enter owner code: ";
