@@ -8,12 +8,12 @@ DebitCard secondDebitCard("Mastercard");
 void initData(BankCardStructure& bankCardStructure, DebitCardStructure& debitCardStructure) {
     std::cout << firstCard << std::endl;
     bankCardStructure.addCard(firstCard);
-    firstDebitCard.createDebitCard(firstCard);
+    firstDebitCard(&firstCard);
     debitCardStructure.addDebitCard(firstDebitCard);
 
     std::cout << secondCard << std::endl;
     bankCardStructure.addCard(secondCard);
-    secondDebitCard.createDebitCard(secondCard);
+    secondDebitCard(secondCard);
     debitCardStructure.addDebitCard(secondDebitCard);
 
     std::cout << firstDebitCard << std::endl;

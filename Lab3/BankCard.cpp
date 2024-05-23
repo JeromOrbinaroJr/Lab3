@@ -7,19 +7,22 @@
 //Constructor
 BankCard::BankCard() {}
 
+//valid?
+
 BankCard::BankCard(const std::string& nameCard, const std::string& numberCard, const std::string& validityPeriod, const std::string& surnameOwner, const std::string& nameOwner, const std::string& patronymicOwner, const std::string& numberOwner, const int& scoreCard) :
 	m_nameCard(nameCard), m_numberCard(numberCard), m_validityPeriodCard(validityPeriod), m_surnameOwner(surnameOwner), m_nameOwner(nameOwner), m_patronymicOwner(patronymicOwner), m_numberOwner(numberOwner), m_scoreCard(scoreCard) {}
+
 //Destructor
 BankCard::~BankCard(){}
 
 //Getters
-std::string BankCard::getNameCard() const { return m_nameCard; }
-std::string BankCard::getNumberCard() const { return m_numberCard; }
-std::string BankCard::getValidityPeriod() const { return m_validityPeriodCard; }
-std::string BankCard::getSurnameOwner() const { return m_surnameOwner; }
-std::string BankCard::getNameOwner() const { return m_nameOwner; }
-std::string BankCard::getPatronomycOwner() const { return m_patronymicOwner; }
-std::string BankCard::getNumberOwner() const { return m_numberOwner; }
+std::string BankCard::getNameCard() const& { return m_nameCard; }
+std::string BankCard::getNumberCard() const& { return m_numberCard; }
+std::string BankCard::getValidityPeriod() const& { return m_validityPeriodCard; }
+std::string BankCard::getSurnameOwner() const& { return m_surnameOwner; }
+std::string BankCard::getNameOwner() const& { return m_nameOwner; }
+std::string BankCard::getPatronomycOwner() const& { return m_patronymicOwner; }
+std::string BankCard::getNumberOwner() const& { return m_numberOwner; }
 int BankCard::getScoreCard() const { return m_scoreCard; }
 
 //Setters

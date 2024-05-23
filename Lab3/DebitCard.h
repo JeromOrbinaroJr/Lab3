@@ -8,9 +8,10 @@ public:
 	//Constructor
 	DebitCard();
 	DebitCard(const std::string& namePaymentSys);
+	DebitCard(const BankCard& bankCard);
 	
 	//Destructor
-	~DebitCard();
+	~DebitCard();//override
 
 	//Getters
 	std::string getNamePaymentSys() const;
@@ -23,7 +24,7 @@ public:
 	friend std::ostream& operator<<(std::ostream& os, const DebitCard& card);
 
 	//Methods
-	void createDebitCard(const BankCard& bankCard);
+	//void createDebitCard(const BankCard& bankCard);
 	void depositMoney(int amount); // функция: положить деньги
 	void withdrawMoney(int amount); // функция: снять деньги
 private:

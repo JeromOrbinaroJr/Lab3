@@ -7,20 +7,22 @@
 class BankCard {
 public:
     //Constructor
-    BankCard();
-    BankCard(const std::string& nameCard, const std::string& numberCard, const std::string& validityPeriod, const std::string& surnameOwner, const std::string& nameOwner, const std::string& patronymicOwner, const std::string& numberOwner, const int& scoreCard);
+    BankCard() = default;
+    BankCard(const std::string& nameCard, const std::string& numberCard, const std::string& validityPeriod
+        , const std::string& surnameOwner, const std::string& nameOwner, const std::string& patronymicOwner
+        , const std::string& numberOwner, const int& scoreCard); //tm
 
     //Destructor
-    ~BankCard();
+    ~BankCard();//virtual
 
     //Getters
-    std::string getNameCard() const;
-    std::string getNumberCard() const;
-    std::string getValidityPeriod() const;
-    std::string getSurnameOwner() const;
-    std::string getNameOwner() const;
-    std::string getPatronomycOwner() const;
-    std::string getNumberOwner() const;
+    std::string getNameCard() const&;//const ref
+    std::string getNumberCard() const&;
+    std::string getValidityPeriod() const&;
+    std::string getSurnameOwner() const&;
+    std::string getNameOwner() const&;
+    std::string getPatronomycOwner() const&;
+    std::string getNumberOwner() const&;
     int getScoreCard() const;
 
     //Setters
