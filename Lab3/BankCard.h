@@ -13,13 +13,10 @@ public:
         , const std::string& numberOwner, const int& scoreCard); //tm
 
     //Destructor
-    ~BankCard();//virtual
+    virtual ~BankCard();//virtual
 
     //Getters
     std::string getNameCard() const&;//const ref
-
-    const std::string& getNameCard() const;
-
     std::string getNumberCard() const&;
     std::string getValidityPeriod() const&;
     std::string getSurnameOwner() const&;
