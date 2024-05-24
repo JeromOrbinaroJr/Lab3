@@ -1,7 +1,7 @@
 #include "BankCardStructure.h"
 
-void BankCardStructure::addCard(const BankCard& card) {//rvalue, std::move, emplace_back
-	cards.push_back(card);
+void BankCardStructure::addCard(const BankCard&& card) {//rvalue, std::move, emplace_back
+	cards.push_back(std::move(card));
 }
 
 const std::vector<BankCard>& BankCardStructure::getAllCards() const {

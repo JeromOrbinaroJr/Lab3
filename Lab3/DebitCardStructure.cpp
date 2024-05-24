@@ -5,9 +5,6 @@ void DebitCardStructure::addDebitCard(const DebitCard& debitCard) {
 }
 
 void DebitCardStructure::printWithdrawalOwnerNumber(const DebitCard& firstDebitCard, const DebitCard& secondDebitCard) {
-    //bool withdrawnFromFirstCard = firstDebitCard.getWithdrawalOwnerNumber() != "";//.empty
-    //bool withdrawnFromSecondCard = secondDebitCard.getWithdrawalOwnerNumber() != "";
-
     if (!firstDebitCard.getWithdrawalOwnerNumber().empty() && !secondDebitCard.getWithdrawalOwnerNumber().empty()) {
         std::cout << "Withdrawal made from the accounts of both owners." << std::endl;
     }
