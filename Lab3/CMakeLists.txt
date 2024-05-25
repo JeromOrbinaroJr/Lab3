@@ -4,4 +4,4 @@ project(Lab3)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-add_executable(MyExecutable BankCard.h BankCardStructure.h DataLoader.h DebitCard.h DebitCardStructure.h main.cpp BankCard.cpp BankCardStructure.h DataLoader.cpp DebirCard.cpp DebitCardStructure.cpp)
+add_executable(MyExecutable BankCard.h DebitCard.h Structure.h DataLoader.h main.cpp BankCard.cpp DebitCard.cpp Structure.cpp)

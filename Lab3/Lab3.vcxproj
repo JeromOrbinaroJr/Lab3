@@ -128,18 +128,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BankCard.cpp" />
-    <ClCompile Include="BankCardStructure.cpp" />
-    <ClCompile Include="DataLoader.cpp" />
     <ClCompile Include="DebitCard.cpp" />
-    <ClCompile Include="DebitCardStructure.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Structure.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BankCard.h" />
-    <ClInclude Include="BankCardStructure.h" />
     <ClInclude Include="DataLoader.h" />
     <ClInclude Include="DebitCard.h" />
-    <ClInclude Include="DebitCardStructure.h" />
+    <ClInclude Include="Structure.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="CMakeLists.txt" />
