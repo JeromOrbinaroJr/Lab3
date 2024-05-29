@@ -1,7 +1,7 @@
 #include "Structure.h"
 
-void BankCardStructure::addCard(const BankCard&& card) {//rvalue, std::move, emplace_back
-    cards.push_back(std::move(card));
+void BankCardStructure::addCard(BankCard&& card) {//rvalue, std::move, emplace_back
+    cards.emplace_back(std::move(card));
 }
 
 const std::vector<BankCard>& BankCardStructure::getAllCards() const {
@@ -17,6 +17,17 @@ const std::vector<BankCard>& BankCardStructure::getAllCards() const {
 //    return "There is no such client."; //std::optional
 //}
 
+const std::tm& BankCardStructure::getValidityPeriodByOwnerNumber(std::string ownerNumber) const {
+    static std::tm nullDate{}; 
+
+    for (const auto& card : cards) {
+        if (card.getNumberOwner() == ownerNumber) {
+            return card.getValidityPeriod();
+        }
+    }
+    return nullDate;
+}
+
 void BankCardStructure::sameNames(const BankCard& firstCard, const BankCard& secondCard) {
     const std::string& nameFirstCard = firstCard.getNameCard();
     std::string nameSecondCard = secondCard.getNameCard();
@@ -28,8 +39,8 @@ void BankCardStructure::sameNames(const BankCard& firstCard, const BankCard& sec
     }
 }
 
-void DebitCardStructure::addDebitCard(const DebitCard& debitCard) {
-    debitCards.push_back(debitCard);
+void DebitCardStructure::addDebitCard(DebitCard&& debitCard) {
+    debitCards.emplace_back(std::move(debitCard));
 }
 
 void DebitCardStructure::printWithdrawalOwnerNumber(const DebitCard& firstDebitCard, const DebitCard& secondDebitCard) {
