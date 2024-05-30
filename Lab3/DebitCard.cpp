@@ -31,14 +31,12 @@ std::ostream& operator<<(std::ostream& os, const DebitCard& card) {
 
 // Methods
 void DebitCard::depositMoney(int amount) {
+    if (amount <= 0) { throw std::invalid_argument("Invalid deposit amount."); }
     setScoreCard(getScoreCard() + amount);
 }
 
 void DebitCard::withdrawMoney(int amount) {
-    if (amount <= getScoreCard()) {
-        setScoreCard(getScoreCard() - amount);
-    }
-    else {
-        std::cout << "Insufficient funds!" << std::endl;
-    }
+    if (amount <= 0) { throw std::invalid_argument("Invalid withdrawal amount."); }
+    if (amount > getScoreCard()) { throw std::runtime_error("Insufficient funds."); }
+    setScoreCard(getScoreCard() - amount);
 }

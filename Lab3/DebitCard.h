@@ -7,8 +7,8 @@ class DebitCard : public BankCard {
 public:
 	//Constructor
 	DebitCard() = default;
-	DebitCard(const std::string& namePaymentSys);
-	DebitCard(const BankCard& bankCard);
+	explicit DebitCard(const std::string& namePaymentSys);
+	explicit DebitCard(const BankCard& bankCard);
 	
 	//Destructor
 	~DebitCard() override;

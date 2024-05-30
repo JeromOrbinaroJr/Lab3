@@ -3,6 +3,7 @@
 #include <cinttypes>
 #include <iostream>
 #include <vector>
+
 #include <ctime>    
 #include <sstream>
 #include <iomanip> 
@@ -11,7 +12,7 @@ class BankCard {
 public:
     //Constructor
     BankCard() = default;
-    BankCard(const std::string& nameCard, const std::string& numberCard, const std::tm& validityPeriod
+    explicit BankCard(const std::string& nameCard, const std::string& numberCard, const std::tm& validityPeriod
         , const std::string& surnameOwner, const std::string& nameOwner, const std::string& patronymicOwner
         , const std::string& numberOwner, const int& scoreCard);
 
@@ -41,7 +42,7 @@ public:
     //Operator Overloading
     friend std::ostream& operator<<(std::ostream& os, const BankCard& card);
 
-private:
+protected:
     std::string m_nameCard;
     std::string m_numberCard;
     std::tm m_validityPeriodCard; // Изменено на std::tm
